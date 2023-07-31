@@ -1,0 +1,29 @@
+<p>projectlist works!</p>
+<table class="table table-striped">
+    <thead>
+        <tr class="bg-success">
+    <th>Project ID:</th>
+    <th>Project Name:</th>
+    <th>Start Date:</th>
+    <th>End Date:</th>
+    <th>Description:</th>
+    <th>Status:</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let project of  projects">
+    
+    <td>{{project.name}}</td>
+    <td>{{project.startDate}}</td>
+    
+    <td>{{project.endDate}}</td>
+    <td>{{project.description}}</td>
+    <td>{{project.status}}</td>
+    <td><button (click)="updateProject(project.id)" class="btn btn-info">
+        Update</button></td>
+     <td><button (click)="deleteProject(project.id)" class="btn btn-danger">
+        Delete</button></td>
+       {{message}}
+    </tr>
+    </tbody>
+    </table>
